@@ -6,9 +6,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
+import { MemberComponent } from './member/member.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MemberComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,

@@ -4,11 +4,7 @@
   </mat-form-field>
   <div formArrayName="members">
     <div *ngFor="let member of members.controls; let i = index">
-      <span [formGroupName]="i">
-        <mat-form-field>
-          <input matInput placeholder="Member" formControlName="memberName" />
-        </mat-form-field>
-      </span>
+      <app-member [formGroupName]="i"></app-member>
       <button mat-icon-button (click)="removeMember(i)">
         <mat-icon>delete_forever</mat-icon>
       </button>
