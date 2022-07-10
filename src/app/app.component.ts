@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -28,5 +28,9 @@ export class AppComponent {
 
   removeMember(index: number) {
     this.members.removeAt(index);
+  }
+
+  getMember(index: number) {
+    return this.members.at(index) as FormGroup;
   }
 }
