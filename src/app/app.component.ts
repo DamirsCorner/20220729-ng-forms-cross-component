@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MemberFormGroup } from './types';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,13 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent {
   form = this.formBuilder.group({
     groupName: ['', Validators.required],
-    members: this.formBuilder.array([]),
+    members: this.formBuilder.array<MemberFormGroup>([]),
   });
 
   constructor(private formBuilder: FormBuilder) {}
 
-  get members() {
-    return this.form.get('members') as FormArray;
+  get members(): FormArray<MemberFormGroup> {
+    return this.form.controls.members;
   }
 
   addMember() {
