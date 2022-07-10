@@ -1,4 +1,4 @@
-<span [formGroupName]="formGroupName">
+<span *ngIf="formGroup" [formGroup]="formGroup">
   <mat-form-field>
     <input matInput placeholder="Member" formControlName="memberName" />
   </mat-form-field>
