@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { MemberFormGroup } from '../types';
 
 @Component({
   selector: 'app-member',
@@ -7,7 +7,7 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./member.component.scss'],
 })
 export class MemberComponent {
-  @Input() formGroup?: FormGroup;
+  @Input() formGroup?: MemberFormGroup;
 
   constructor() {}
 }

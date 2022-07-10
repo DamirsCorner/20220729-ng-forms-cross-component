@@ -4,7 +4,7 @@
   </mat-form-field>
   <div formArrayName="members">
     <div *ngFor="let member of members.controls; let i = index">
-      <app-member [formGroup]="getMember(i)"></app-member>
+      <app-member [formGroup]="member"></app-member>
       <button mat-icon-button (click)="removeMember(i)">
         <mat-icon>delete_forever</mat-icon>
       </button>
